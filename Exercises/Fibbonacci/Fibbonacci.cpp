@@ -4,15 +4,19 @@ using namespace std;
 
 int main()
 {
-    int n;
-    cin >> n;
-    int a=0, b=0, c=1;
-    while(n!=0)
+    unsigned long long n;
+    unsigned long long a=0, b=1, c=0;
+    while(true)
     {
-        a += b;
-        b=c;
-        c=a;
-        n--; 
+        cin >> n;
+        a=0, b=1, c=0;
+        while(n!=0)
+        {
+            a += b;
+            b=c;
+            c=a;
+            n--; 
+        }
+        cout << a << endl;
     }
-    cout << a << endl;
 }
