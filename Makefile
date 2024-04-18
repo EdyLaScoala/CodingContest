@@ -1,5 +1,5 @@
 
 
 ex:
-	@read -p "Enter the exercise ID: " EXERCISE_ID; \
+	@read -p "Enter the exercise name: " EXERCISE_ID; \
 	"Generator/MakeExercise.sh" "$$EXERCISE_ID";
