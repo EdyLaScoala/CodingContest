@@ -25,31 +25,26 @@ int main()
         {
             for(int j=c-1; j>=0; j--)
             {
-                cout << val << " -- " << v[0][j] << endl;
-                if(val+v[0][j]==i)
+                if(val + v[0][j]<=i)
                 {
                     val += v[0][j];
                     v[1][j]++;
                     break;
                 }
-                if(val + v[0][j]<i)
-                {
-                    val += v[0][j];
-                    v[1][j]++;
-                }
             }
         }
-        //cout << val << endl;
-        for(int j=0; j<c; j++)
+        for(int j=c-1; j>=0; j--)
         {
             if(v[1][j]!=0)
             {
-                fout << i << ": " << v[1][j] << "x" << v[0][j] << "  ";
+                fout << v[1][j] << "x" << v[0][j] << " ";
             }
             v[1][j] = 0;
         }
         fout << endl;
     }
+    fout << endl;
     n--;
   }
+  return 0;
 }
