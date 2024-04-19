@@ -6,19 +6,22 @@ using namespace std;
 int main()
 {
   ifstream fin("date.in");
+  ofstream fout("date.out");
   int n, c, var;
+  bool found  = false;
   fin >> n >> c;
   while(n!=0)
   {
-    for(int i=0; i<c; i++)
+    for(int i=1; i<=c; i++)
     {
       fin >> var;
-      if(var>i)
+      if(i<var && !found)
       {
-        cout << i << endl;
-        break;
+        fout << i << endl;
+        found = true;
       }
     }
+    found =  false;
     n--;
   }
 }
