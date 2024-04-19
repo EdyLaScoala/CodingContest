@@ -3,7 +3,7 @@
 
 using namespace std;
 
-ifstream fin("date.in");
+ifstream fin("data.in");
 
 int main()
 {
