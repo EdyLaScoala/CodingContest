@@ -3,9 +3,10 @@
 
 using namespace std;
 
+ifstream fin("date.in");
+
 int main()
 {
-   ifstream fin("date.in");
    int n;
    fin >> n;
    cout << n << endl;
